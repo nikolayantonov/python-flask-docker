@@ -1,0 +1,139 @@
+
+Showing logs for build [32mnikolayantonov-python-flask-doc-jn8b8-4[0m stage [32mmeta-pipeline[0m and container [32mstep-credential-initializer-gwpk2[0m
+{"level":"warn","ts":1568383445.224207,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1568383445.2248108,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mnikolayantonov-python-flask-doc-jn8b8-4[0m stage [32mmeta-pipeline[0m and container [32mstep-working-dir-initializer-dr68h[0m
+{"level":"warn","ts":1568383446.2241926,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1568383446.226039,"logger":"fallback-logger","caller":"bash/main.go:65","msg":"Successfully executed command \"mkdir -p /workspace/source\""}
+
+Showing logs for build [32mnikolayantonov-python-flask-doc-jn8b8-4[0m stage [32mmeta-pipeline[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mnikolayantonov-python-flask-doc-jn8b8-4[0m stage [32mmeta-pipeline[0m and container [32mstep-git-source-meta-nikolayantonov-python-flas-22d2k[0m
+{"level":"warn","ts":1568383450.2533238,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1568383450.4713848,"logger":"fallback-logger","caller":"git/git.go:102","msg":"Successfully cloned https://github.com/**************/python-flask-docker.git @ c646571e1fee3758cc9bc7531cb8757b9a697696 in path /workspace/source"}
+
+Showing logs for build [32mnikolayantonov-python-flask-doc-jn8b8-4[0m stage [32mmeta-pipeline[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:c646571e1fee3758cc9bc7531cb8757b9a697696
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32mnikolayantonov-python-flask-doc-jn8b8-4[0m stage [32mmeta-pipeline[0m and container [32mstep-merge-pull-refs[0m
+SKIP merge-pull-refs: Nothing to merge
+
+Showing logs for build [32mnikolayantonov-python-flask-doc-jn8b8-4[0m stage [32mmeta-pipeline[0m and container [32mstep-create-effective-pipeline[0m
+Deleting and cloning the Jenkins X versions repo
+Cloning the Jenkins X versions repo https://github.com/jenkins-x/jenkins-x-versions.git with ref refs/heads/master to /builder/home/.**/jenkins-x-versions
+performing pack detection in folder /workspace/source
+--> Draft detected YAML (44.374380%)
+--> Could not find a pack for YAML. Trying to find the next likely language match...
+--> Draft detected Perl (15.856596%)
+--> Could not find a pack for Perl. Trying to find the next likely language match...
+--> Draft detected RPM Spec (15.268528%)
+--> Could not find a pack for RPM Spec. Trying to find the next likely language match...
+--> Draft detected Text (7.396911%)
+--> Could not find a pack for Text. Trying to find the next likely language match...
+--> Draft detected Coq (5.179255%)
+--> Could not find a pack for Coq. Trying to find the next likely language match...
+--> Draft detected Smarty (3.655944%)
+--> Could not find a pack for Smarty. Trying to find the next likely language match...
+--> Draft detected Python (2.897832%)
+selected pack: /builder/home/.**/draft/packs/github.com/jenkins-x-buildpacks/jenkins-x-kubernetes/packs/python
+Effective pipeline written to jenkins-x-effective.yml
+
+Showing logs for build [32mnikolayantonov-python-flask-doc-jn8b8-4[0m stage [32mmeta-pipeline[0m and container [32mstep-create-tekton-crds[0m
+running command: echo \$(**-release-version) > VERSION
+
+running command: ** step tag --version \$(cat VERSION)
+Updating chart version in charts/python-flask-docker/Chart.yaml to 0.0.4
+Updating repository in charts/python-flask-docker/values.yaml to 955135126607.dkr.ecr.us-west-2.amazonaws.com/**************/python-flask-docker
+Updating tag in charts/python-flask-docker/values.yaml to 0.0.4
+Tag v0.0.4 created and pushed to remote origin
+
+WARNING: failed to find secret kaniko-secret in namespace **: secrets "kaniko-secret" not found
+PipelineActivity for **************-python-flask-docker-master-4
+Applying changes 
+upserted PipelineResource **************-python-flask-doc for the git repository https://github.com/**************/python-flask-docker.git
+upserted Task **************-python-flask-doc-jn8b8-from-build-pack-4
+upserted Pipeline **************-python-flask-doc-jn8b8-4
+created PipelineRun **************-python-flask-doc-jn8b8-4
+created PipelineStructure **************-python-flask-doc-jn8b8-4
+
+Showing logs for build [32mnikolayantonov-python-flask-doc-jn8b8-4[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-t46jz[0m
+{"level":"warn","ts":1568383461.380219,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1568383461.3809845,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mnikolayantonov-python-flask-doc-jn8b8-4[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-bkgnl[0m
+{"level":"warn","ts":1568383462.367779,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1568383462.368639,"logger":"fallback-logger","caller":"bash/main.go:65","msg":"Successfully executed command \"mkdir -p /workspace/source /workspace/source/charts/python-flask-docker\""}
+
+Showing logs for build [32mnikolayantonov-python-flask-doc-jn8b8-4[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mnikolayantonov-python-flask-doc-jn8b8-4[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-nikolayantonov-python-flask-doc-5g9vm[0m
+{"level":"warn","ts":1568383469.4326396,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1568383469.6249835,"logger":"fallback-logger","caller":"git/git.go:102","msg":"Successfully cloned https://github.com/**************/python-flask-docker.git @ v0.0.4 in path /workspace/source"}
+
+Showing logs for build [32mnikolayantonov-python-flask-doc-jn8b8-4[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:c646571e1fee3758cc9bc7531cb8757b9a697696
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32mnikolayantonov-python-flask-doc-jn8b8-4[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
+Generated Git credentials file /workspace/xdg_config/git/credentials
+
+Showing logs for build [32mnikolayantonov-python-flask-doc-jn8b8-4[0m stage [32mfrom-build-pack[0m and container [32mstep-build-python-unittest[0m
+
+----------------------------------------------------------------------
+Ran 0 tests in 0.000s
+
+OK
+
+Showing logs for build [32mnikolayantonov-python-flask-doc-jn8b8-4[0m stage [32mfrom-build-pack[0m and container [32mstep-build-container-build[0m
+[36mINFO[0m[0000] Downloading base image python:3.6            
+[36mINFO[0m[0001] Error while retrieving image from cache: getting file info: stat /workspace/sha256:3046835b0ec654bc86caf7b4214c3d890bf4e6f636a97036c16ae046ef30bb76: no such file or directory 
+[36mINFO[0m[0001] Downloading base image python:3.6            
+[36mINFO[0m[0002] Applying label maintainer=lorenz.vanthillo@gmail.com 
+[36mINFO[0m[0002] Using files from context: [/workspace/source] 
+[36mINFO[0m[0002] Checking for cached layer 955135126607.dkr.ecr.us-west-2.amazonaws.com/todo/cache:29431532dc0013c32ca6ed084b85a34f0156e9d40a1b2a06c7c669a47085844e... 
+[36mINFO[0m[0002] No cached layer found for cmd RUN pip install -r requirements.txt 
+[36mINFO[0m[0002] Unpacking rootfs as cmd RUN pip install -r requirements.txt requires it. 
+[36mINFO[0m[0023] Taking snapshot of full filesystem...        
+[36mINFO[0m[0026] LABEL maintainer="lorenz.vanthillo@gmail.com" 
+[36mINFO[0m[0026] Applying label maintainer=lorenz.vanthillo@gmail.com 
+[36mINFO[0m[0026] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0026] Using files from context: [/workspace/source] 
+[36mINFO[0m[0026] COPY . /app                                  
+[36mINFO[0m[0026] Taking snapshot of files...                  
+[36mINFO[0m[0026] WORKDIR /app                                 
+[36mINFO[0m[0026] cmd: workdir                                 
+[36mINFO[0m[0026] Changed working directory to /app            
+[36mINFO[0m[0026] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0026] RUN pip install -r requirements.txt          
+[36mINFO[0m[0026] cmd: /bin/sh                                 
+[36mINFO[0m[0026] args: [-c pip install -r requirements.txt]   
+Collecting flask==1.0.2 (from -r requirements.txt (line 1))
+  Downloading https://files.pythonhosted.org/packages/7f/e7/08578774ed4536d3242b14dacb4696386634607af824ea997202cd0edb4b/Flask-1.0.2-py2.py3-none-any.whl (91kB)
+Collecting itsdangerous>=0.24 (from flask==1.0.2->-r requirements.txt (line 1))
+  Downloading https://files.pythonhosted.org/packages/76/ae/44b03b253d6fade317f32c24d100b3b35c2239807046a4c953c7b89fa49e/itsdangerous-1.1.0-py2.py3-none-any.whl
+Collecting Werkzeug>=0.14 (from flask==1.0.2->-r requirements.txt (line 1))
+  Downloading https://files.pythonhosted.org/packages/b7/61/c0a1adf9ad80db012ed7191af98fa05faa95fa09eceb71bb6fa8b66e6a43/Werkzeug-0.15.6-py2.py3-none-any.whl (328kB)
+Collecting click>=5.1 (from flask==1.0.2->-r requirements.txt (line 1))
+  Downloading https://files.pythonhosted.org/packages/fa/37/45185cb5abbc30d7257104c434fe0b07e5a195a6847506c074527aa599ec/Click-7.0-py2.py3-none-any.whl (81kB)
+Collecting Jinja2>=2.10 (from flask==1.0.2->-r requirements.txt (line 1))
+  Downloading https://files.pythonhosted.org/packages/1d/e7/fd8b501e7a6dfe492a433deb7b9d833d39ca74916fa8bc63dd1a4947a671/Jinja2-2.10.1-py2.py3-none-any.whl (124kB)
+Collecting MarkupSafe>=0.23 (from Jinja2>=2.10->flask==1.0.2->-r requirements.txt (line 1))
+  Downloading https://files.pythonhosted.org/packages/b2/5f/23e0023be6bb885d00ffbefad2942bc51a620328ee910f64abe5a8d18dd1/MarkupSafe-1.1.1-cp36-cp36m-manylinux1_x86_64.whl
+Installing collected packages: itsdangerous, Werkzeug, click, MarkupSafe, Jinja2, flask
+Successfully installed Jinja2-2.10.1 MarkupSafe-1.1.1 Werkzeug-0.15.6 click-7.0 flask-1.0.2 itsdangerous-1.1.0
+[36mINFO[0m[0028] Taking snapshot of full filesystem...        
+[36mINFO[0m[0032] EXPOSE 8080                                  
+[36mINFO[0m[0032] cmd: EXPOSE                                  
+[36mINFO[0m[0032] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0032] Pushing layer 955135126607.dkr.ecr.us-west-2.amazonaws.com/todo/cache:29431532dc0013c32ca6ed084b85a34f0156e9d40a1b2a06c7c669a47085844e to cache now 
+[36mINFO[0m[0032] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0032] ENTRYPOINT ["python"]                        
+[36mINFO[0m[0032] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0032] CMD ["app/app.py"]                           
+[36mINFO[0m[0032] No files changed in this command, skipping snapshotting. 
+[33mWARN[0m[0032] error uploading layer to cache: failed to push to destination 955135126607.dkr.ecr.us-west-2.amazonaws.com/todo/cache:29431532dc0013c32ca6ed084b85a34f0156e9d40a1b2a06c7c669a47085844e: DENIED: User: arn:aws:sts::955135126607:assumed-role/eksctl-demo-eks-cluster-nodegroup-NodeInstanceRole-1U8BZZ1NSMLJM/i-07787ee6e04390c63 is not authorized to perform: ecr:InitiateLayerUpload on resource: arn:aws:ecr:us-west-2:955135126607:repository/todo/cache 
+error pushing image: failed to push to destination 955135126607.dkr.ecr.us-west-2.amazonaws.com/**************/python-flask-docker:0.0.4: DENIED: User: arn:aws:sts::955135126607:assumed-role/eksctl-demo-eks-cluster-nodegroup-NodeInstanceRole-1U8BZZ1NSMLJM/i-07787ee6e04390c63 is not authorized to perform: ecr:CompleteLayerUpload on resource: arn:aws:ecr:us-west-2:955135126607:repository/**************/python-flask-docker
+[31m
+Pipeline failed on stage 'from-build-pack' : container 'step-build-container-build'. The execution of the pipeline has stopped.[0m
